@@ -6,6 +6,7 @@ import java.util.List;
 public class GenerateAllSubstrings {
     public static void main(String[] args) {
         substringsIerative("mike").forEach(s -> System.out.println(s));
+        substringsReursive("mike").forEach(s -> System.out.println(s));
 
     }
     
@@ -21,13 +22,33 @@ public class GenerateAllSubstrings {
     }
     private static List<String> substringsReursive(String s){
         List<String> results = new ArrayList<>();
-        iterateOverFirst(s, results, 0);
+        iterateOverFirst(s,  0, results);
 
         return results;
     }
 
+    private static void iterateOverFirst(String s,  int i, List<String> results) {
 
 
-    
-    
+        if(i==s.length()){
+            return;
+        }
+
+        iterateOverSecond(s, i, i+1, results);
+        iterateOverFirst(s, i+1, results);
+
+    }
+    private static void iterateOverSecond(String s,  int i, int j,List<String> results) {
+
+
+        if(j>s.length()){
+            return;
+        }
+
+        results.add(s.substring(i,j));
+        iterateOverSecond(s, i, j+1, results);
+
+    }
+
+
 }
