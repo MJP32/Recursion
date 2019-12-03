@@ -1,4 +1,4 @@
-package module4;
+package module4.combinations;
 
 import java.util.LinkedList;
 import java.util.List;

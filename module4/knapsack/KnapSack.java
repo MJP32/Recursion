@@ -9,7 +9,7 @@ public class KnapSack {
     public static void main(String[] args) {
 
     }
-    public static List<Item> knapsack(Item[] items, int totalWeight ){
+    /*public static List<Item> knapsack(Item[] items, int totalWeight ){
         List<List<Item>> results= new LinkedList<List<Item>>();
 
         knapsack(items, 0, new LinkedList<Item>(), results);
@@ -40,5 +40,5 @@ public class KnapSack {
 
         knapsack(items,i+1,path,results);
         path.remove(path.size()-1);
-    }
+    }*/
 }
